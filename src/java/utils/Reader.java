@@ -1,6 +1,5 @@
 package utils;
 
-
 import storage.Drink;
 import storage.KitchenTool;
 import storage.Meal;
@@ -17,7 +16,7 @@ public class Reader {
     final static String kitchenToolsTxt = "src/resources/KitchenTools.txt";
 
 
-    public static ArrayList Buffer(String fileName) throws IOException {
+    public static void Buffer(String fileName) throws IOException {
 
         FileReader fileReader = new FileReader(fileName);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -30,35 +29,39 @@ public class Reader {
             String[] parts = line.split(",");
 //            if (fileName.equals("src/resources/Drinks.txt")) {
 //                drinks.add(new Drink(parts[0], Integer.parseInt(parts[1]), parts[2].equals("alkoholos")));
-//                return drinks;
+//                // return drinks;
 //            } else if (fileName.equals("src/resources/Meals.txt")) {
 //                meals.add(new Meal(parts[0], Integer.parseInt(parts[1]), parts[2]));
-//                return meals;
+//                // return meals;
 //            } else if (fileName.equals("src/resources/KitchenTools.txt")) {
 //                kitchenTools.add(new KitchenTool(parts[0], Integer.parseInt(parts[1])));
-//                return kitchenTools;
+//                // return kitchenTools;
 //            }
+//        }
 
             switch (fileName) {
                 case drinksTxt -> {
-                    drinks.add(new Drink(parts[0], Integer.parseInt(parts[1]), parts[2].equals("alkoholos")));
-                    return drinks;
+                    drinks.add(new Drink(parts[0], Integer.parseInt(parts[1]), parts[2].equals("alkoholos"), parts[3]));
+                    // return drinks;
                 }
                 case mealsTxt -> {
                     meals.add(new Meal(parts[0], Integer.parseInt(parts[1]), parts[2]));
-                    return meals;
+                    // return meals;
                 }
                 case kitchenToolsTxt -> {
                     kitchenTools.add(new KitchenTool(parts[0], Integer.parseInt(parts[1])));
-                    return kitchenTools;
+                    // return kitchenTools;
                 }
             }
-
-//            for (int i = 0; i < drinks.size(); i++) {
-//                System.out.println(drinks.get(i).getName());
-//            }
         }
-        return null;
+
+        for (int i = 0; i < drinks.size(); i++) {
+            System.out.println(drinks.get(i).getName() + ": " + drinks.get(i).getAmount() + " -> " + drinks.get(i).getType()); // + " " + drinks.get(i).getType()
+        }
+        for (int i = 0; i < meals.size(); i++) {
+            System.out.println(meals.get(i).getName() + ": " + meals.get(i).getAmount());
+        }
+        // return null;
     }
 }
 

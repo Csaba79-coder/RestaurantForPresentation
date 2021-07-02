@@ -1,4 +1,4 @@
-Pohár, 100
+Pohár,100
 Tányér,100
 Evőeszköz,100
 Tálca,30

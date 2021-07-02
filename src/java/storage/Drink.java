@@ -10,6 +10,7 @@ public class Drink extends StorageElement {
      */
 
     private boolean isAlcoholic;
+    private String type;
 
     public Drink() {
     }
@@ -18,9 +19,10 @@ public class Drink extends StorageElement {
         super(name, amount);
     }
 
-    public Drink(String name, int amount, boolean isAlcoholic) {
+    public Drink(String name, int amount, boolean isAlcoholic, String type) {
         super(name, amount);
         this.isAlcoholic = isAlcoholic;
+        this.type = type;
     }
 
     public boolean isAlcoholic() {
@@ -33,5 +35,13 @@ public class Drink extends StorageElement {
 
     public Drink(boolean isAlcoholic) {
         this.isAlcoholic = isAlcoholic;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
