@@ -1,0 +1,8 @@
+Mediterrán halleves,40,leves,étel
+Szabadtartású csirkeleves,40,leves,étel
+Caesar saláta,30,főétel,étel
+Lazac steak,30,főétel,étel
+Rib-eye,30,főétel,étel
+Serpenyős fokhagymás-chillis rák,20,főétel,étel
+Sajttorta,10,desszert,étel
+Csokoládé torta,10,desszert,étel

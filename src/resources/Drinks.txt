@@ -1,0 +1,6 @@
+Dreher gold,80,alkoholos,ital
+Pilsner,80,alkoholos,ital
+Tokaji aszu,40,alkoholos,ital
+Coca-Cola,100,nem alkoholos,ital
+Fanta orange,70,nem alkoholos,ital
+Kinley ginger ale,60,nem alkoholos,ital
