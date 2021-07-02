@@ -11,9 +11,9 @@ import java.util.ArrayList;
 
 public class Reader {
 
-    final static String drinksTxt = "src/resources/Drinks.txt";
-    final static String mealsTxt = "src/resources/Meals.txt";
-    final static String kitchenToolsTxt = "src/resources/KitchenTools.txt";
+    final static String DRINKS_TXT = "src/resources/Drinks.txt";
+    final static String MEALS_TXT = "src/resources/Meals.txt";
+    final static String KITCHEN_TOOLS_TXT = "src/resources/KitchenTools.txt";
 
 
     public static void Buffer(String fileName) throws IOException {
@@ -40,26 +40,29 @@ public class Reader {
 //        }
 
             switch (fileName) {
-                case drinksTxt -> {
+                case DRINKS_TXT -> {
                     drinks.add(new Drink(parts[0], Integer.parseInt(parts[1]), parts[2].equals("alkoholos"), parts[3]));
                     // return drinks;
                 }
-                case mealsTxt -> {
+                case MEALS_TXT -> {
                     meals.add(new Meal(parts[0], Integer.parseInt(parts[1]), parts[2]));
                     // return meals;
                 }
-                case kitchenToolsTxt -> {
+                case KITCHEN_TOOLS_TXT -> {
                     kitchenTools.add(new KitchenTool(parts[0], Integer.parseInt(parts[1])));
                     // return kitchenTools;
                 }
             }
         }
 
-        for (int i = 0; i < drinks.size(); i++) {
-            System.out.println(drinks.get(i).getName() + ": " + drinks.get(i).getAmount() + " -> " + drinks.get(i).getType()); // + " " + drinks.get(i).getType()
+        for (Drink drink : drinks) {
+            System.out.println(drink.getName() + ": " + drink.getAmount() + " -> " + drink.getType()); // + " " + drinks.get(i).getType()
         }
-        for (int i = 0; i < meals.size(); i++) {
-            System.out.println(meals.get(i).getName() + ": " + meals.get(i).getAmount());
+//        for (int i = 0; i < drinks.size(); i++) {
+//            System.out.println(drinks.get(i).getName() + ": " + drinks.get(i).getAmount() + " -> " + drinks.get(i).getType()); // + " " + drinks.get(i).getType()
+//        }
+        for (Meal meal : meals) {
+            System.out.println(meal.getName() + ": " + meal.getAmount());
         }
         // return null;
     }
