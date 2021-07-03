@@ -43,7 +43,7 @@ public class Reader {
 
             switch (fileName) {
                 case DRINKS_TXT -> {
-                    DRINKS.add(new Drink(parts[0], Integer.parseInt(parts[1]), parts[2].equals("alkoholos"), parts[3]));
+                    DRINKS.add(new Drink(parts[0], Integer.parseInt(parts[1]), parts[2].equals("alkoholos"), parts[3].equals("ital")));
                 }
                 case MEALS_TXT -> {
                     MEALS.add(new Meal(parts[0], Integer.parseInt(parts[1]), parts[2], parts[3].equals("étel")));

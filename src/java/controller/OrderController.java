@@ -20,6 +20,8 @@ public class OrderController {
 
     private int availableQuantity;
 
+    StorageController storageController = new StorageController();
+
 /*    // in an empty constructor defining as follows:
 
     public OrderController() {
@@ -59,24 +61,28 @@ public class OrderController {
          TODO case 1 if guest order, decreasing quantity
          TODO case 2 make new food on kitchen increasing quantity
          */
+        for (int i = 0; i < storageController.drinkList.size(); i++) {
+            if (!IS_FOOD) {
+                // TODO name checker!!!
+                // TODO change the glasses amount as well!!!!
 
+                // TODO check if enough quantity!!! 
 
-        if (!IS_FOOD) {
-            // TODO name checker!!!
-            // TODO change the glasses amount as well!!!!
-
-            // This is an empty Object, never meets my request :)
-            Drink drink = new Drink(); // instead of it, I need the list!!!
-            if (ORDER_NAME.equals(drink.getName())) {
-                availableQuantity = drink.getAmount() - this.QUANTITY;
-                System.out.println(drink.getName() + " quantity successfully changed!");
-                System.out.println("pohár is also successfully changed!");
-        } else {
-            Meal meal = new Meal(); // instead of it, I need the list!!!
-            if (ORDER_NAME.equals(meal.getName())) {
-                availableQuantity = meal.getAmount() - this.QUANTITY;
-                System.out.println(meal.getName() + " quantity successfully changed!");
-                // TODO change KitchenTools
+                // This is an empty Object, never meets my request :)
+                // Drink drink = new Drink(); // instead of it, I need the list!!!
+                if (ORDER_NAME.equals(storageController.drinkList.get(i).getName())) {
+                    availableQuantity = (storageController.drinkList.get(i).getAmount() - this.QUANTITY);
+                    System.out.println(storageController.drinkList.get(i).getName() + " quantity successfully changed!");
+                    System.out.println(availableQuantity);
+                    // System.out.println("pohár is also successfully changed!");
+                }
+            } else {
+                    // Meal meal = new Meal(); // instead of it, I need the list!!!
+                if (ORDER_NAME.equals(storageController.mealList.get(i).getName())) {
+                    availableQuantity = (storageController.mealList.get(i).getAmount() - this.QUANTITY);
+                    System.out.println(storageController.mealList.get(i).getName() + " quantity successfully changed!");
+                    System.out.println(availableQuantity);
+                    // TODO change KitchenTools
                 }
             }
         }

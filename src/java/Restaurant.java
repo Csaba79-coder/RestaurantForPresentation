@@ -17,8 +17,6 @@ public class Restaurant {
         fileHandler.readFile("Meals.txt");
         fileHandler.readFile("KitchenTools.txt");
 
-        System.out.println("-------------------------------------------");
-
 //        Reader reader = new Reader();
 //        reader.printArrayList(fileHandler.readFile("Drinks.txt"));
 
@@ -41,5 +39,7 @@ public class Restaurant {
 
         OrderController orderController = new OrderController();
         orderController.printOrder(orderController.takeOrder());
+
+        orderController.quantityModifierDrink(orderController.takeOrder());
     }
 }
