@@ -9,6 +9,7 @@ public class Meal extends StorageElement {
      */
 
     private String type;
+    private boolean category;
 
     public Meal() {
     }
@@ -28,5 +29,19 @@ public class Meal extends StorageElement {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public Meal(String name, int amount, String type, boolean category) {
+        super(name, amount);
+        this.type = type;
+        this.category = category;
+    }
+
+    public boolean isCategory() {
+        return category;
+    }
+
+    public void setCategory(boolean category) {
+        this.category = category;
     }
 }
