@@ -66,7 +66,7 @@ public class OrderController {
                 // TODO name checker!!!
                 // TODO change the glasses amount as well!!!!
 
-                // TODO check if enough quantity!!! 
+                // TODO check if enough quantity!!! and message!!!
 
                 // This is an empty Object, never meets my request :)
                 // Drink drink = new Drink(); // instead of it, I need the list!!!
@@ -75,14 +75,18 @@ public class OrderController {
                     System.out.println(storageController.drinkList.get(i).getName() + " quantity successfully changed!");
                     System.out.println(availableQuantity);
                     // System.out.println("pohár is also successfully changed!");
+//                } else if (!ORDER_NAME.equals(storageController.drinkList.get(i).getName())) {
+//                    System.out.println("Invalid order!");
                 }
             } else {
-                    // Meal meal = new Meal(); // instead of it, I need the list!!!
+                // Meal meal = new Meal(); // instead of it, I need the list!!!
                 if (ORDER_NAME.equals(storageController.mealList.get(i).getName())) {
                     availableQuantity = (storageController.mealList.get(i).getAmount() - this.QUANTITY);
                     System.out.println(storageController.mealList.get(i).getName() + " quantity successfully changed!");
                     System.out.println(availableQuantity);
                     // TODO change KitchenTools
+                } else {
+                    System.out.println("Invalid order!");
                 }
             }
         }
