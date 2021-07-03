@@ -66,4 +66,5 @@ public class Order {
     public void setWaiter(String waiter) {
         this.waiter = waiter;
     }
+
 }

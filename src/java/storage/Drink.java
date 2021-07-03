@@ -44,4 +44,5 @@ public class Drink extends StorageElement {
     public void setType(boolean category) {
         this.category = category;
     }
+
 }

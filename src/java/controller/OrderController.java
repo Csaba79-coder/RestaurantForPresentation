@@ -71,9 +71,9 @@ public class OrderController {
                 // This is an empty Object, never meets my request :)
                 // Drink drink = new Drink(); // instead of it, I need the list!!!
                 if (ORDER_NAME.equals(storageController.drinkList.get(i).getName())) {
-                    availableQuantity = (storageController.drinkList.get(i).getAmount() - this.QUANTITY);
-                    System.out.println(storageController.drinkList.get(i).getName() + " quantity successfully changed!");
-                    System.out.println(availableQuantity);
+                        availableQuantity = (storageController.drinkList.get(i).getAmount() - this.QUANTITY);
+                        System.out.println(storageController.drinkList.get(i).getName() + " quantity successfully changed!");
+                        System.out.println("Available quantity of " + storageController.drinkList.get(i).getName() + " " + availableQuantity);
                     // System.out.println("pohár is also successfully changed!");
 //                } else if (!ORDER_NAME.equals(storageController.drinkList.get(i).getName())) {
 //                    System.out.println("Invalid order!");
@@ -83,10 +83,10 @@ public class OrderController {
                 if (ORDER_NAME.equals(storageController.mealList.get(i).getName())) {
                     availableQuantity = (storageController.mealList.get(i).getAmount() - this.QUANTITY);
                     System.out.println(storageController.mealList.get(i).getName() + " quantity successfully changed!");
-                    System.out.println(availableQuantity);
+                    System.out.println("Available quantity of " + storageController.mealList.get(i).getName() + " " + availableQuantity);
                     // TODO change KitchenTools
-                } else {
-                    System.out.println("Invalid order!");
+//                } else {
+//                    System.out.println("Invalid order!");
                 }
             }
         }
