@@ -24,3 +24,22 @@ Each table needs to handle customer requests.
 You will find more hints in the already created classes,
 but it is not mandatory to follow the given structure.
 Feel free to create new classes and packages.
+
+'''
+
+Bonus:
+
+Asztalnál töltött idő:
+A vendégeink bizonyos időt töltenek el egy asztalnál, az asztalfoglalást 1 órára lehet lefoglalni.
+Bővítsd ki a programot.
+
+Eszközök mosogatása:
+Írj egy controllert ahhoz, hogy az eszközök folyamatosan el legyenek mosogatva, ha valamilyen eszköz hiányzik akkor a rendelés várakozzon amíg nem lesz kész az elmosott eszköz.
+Hasonló módon lehet berendelni folytatólagosan új ételt, italt is.
+
+Eszközök elhasználódása:
+Az eszközeink elhasználódhatnak, eltörhetnek, bővítsd a programot egy metódussal, ami ad egy random esélyt arra, hogy az eszközeink tönkremenjenek (depreciated)
+Hasonló módon az ételeink is tönkremehetnek
+
+
+bónusz feladat a dolgozók kezelése
